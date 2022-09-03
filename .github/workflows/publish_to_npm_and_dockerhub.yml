@@ -7,8 +7,6 @@ name: publish to npm and dockerhub
 
 on:
   push:
-    tags:
-      - v*
 
 jobs:
   test:

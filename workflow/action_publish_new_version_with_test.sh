@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # publish test npm registry
+git status
 yarn release:force --registry http://verdaccio:4873
 npm config set registry http://verdaccio:4873
 

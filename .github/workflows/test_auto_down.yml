@@ -1,0 +1,21 @@
+name: Auto down deploy
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - '**'
+    paths:
+      - '**'
+
+jobs:
+  down_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: down deploy
+        run: |
+          echo '::echo::on'
+          echo 'pr closed and down deploy!'
+          echo ${{ github.event.number }}
+        

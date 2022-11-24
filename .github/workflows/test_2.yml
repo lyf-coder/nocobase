@@ -6,7 +6,7 @@ name: Auto Deploy
 # https://docs.github.com/cn/actions/using-workflows/events-that-trigger-workflows#workflow_run
 on:
   workflow_run:
-    workflows: [ "test event ]
+    workflows: [ "test event" ]
     types:
       - "completed"
 

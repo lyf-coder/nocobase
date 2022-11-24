@@ -23,3 +23,12 @@ jobs:
         with:
           name: pr_number
           path: pr/
+
+      - name: 'test skip shell false'
+        run: |
+          echo '::echo::on'
+          ls a || true
+          ls
+          ls c || true
+          echo 'here!!hhhh'
+          echo ${{ env.pr_number }}

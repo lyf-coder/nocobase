@@ -27,5 +27,6 @@ jobs:
       - name: 'test skip shell false'
         run: |
           echo '::echo::on'
+          echo 'pr status ?'
           echo ${{ github.event.type }}
           echo ${{ env.pr_number }}

@@ -53,6 +53,9 @@ jobs:
       - name: 'if pr num env'
         if: ${{ env.pr_number }}
         run: |
-           echo '::echo::on'
-          echo 'here!test!!!!'
+          echo '::echo::on'
+          ls a;
+          ls
+          ls c
+          echo 'here!!'
           echo ${{ env.pr_number }}

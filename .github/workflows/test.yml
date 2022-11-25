@@ -32,3 +32,19 @@ jobs:
           echo ${{ github.event.number }}
           echo ${{ github.event}}
           echo ${{ github}}
+
+      - name: text message
+        uses: foxundermoon/feishu-action@v2
+        with:
+          url: ${{ secrets.FEISHU_BOT_WEBHOOK_URL }}
+          msg_type: text
+          content: |
+            text: |
+              地址：${{ github.event.pull_request.html_url }}
+              标题：${{ github.event.pull_request.title }}
+              内容：${{ github.event.pull_request.body }}
+              分支：${{ github.event.pull_request.head.ref }}
+              ----------------------------------------------
+              部署环境访问地址：http://${{ secrets.test_host }}:1${{ github.event.number }}
+              -----------------------------------------------
+              请及时更新任务系统的任务状态：https://tasks.nocobase.com/

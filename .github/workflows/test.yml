@@ -32,3 +32,19 @@ jobs:
           echo ${{ github.event.number }}
           echo ${{ github.event}}
           echo ${{ github}}
+
+      - name: text message
+        uses: foxundermoon/feishu-action@v2
+        with:
+          url: ${{ secrets.FEISHU_BOT_WEBHOOK_URL }}
+          msg_type: text
+          content: |
+            text: |
+              hahahah
+              from github action test
+              repository: ${{ github.repository }}
+              committer: ${{ github.actor }}
+              compare: ${{ github.event.compare }}
+              job status: ${{ job.status }}
+              access url: https://www.baidu.com
+              备注: 请及时更新任务系统的任务状态：https://tasks.nocobase.com/

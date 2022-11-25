@@ -45,6 +45,6 @@ jobs:
               内容：${{ github.event.pull_request.body }}
               分支：${{ github.event.pull_request.head.ref }}
               ----------------------------------------------
-              部署环境访问地址：https://tasks.nocobase.com/
+              部署环境访问地址：http://${{ secrets.TEST_HOST }}:1${{ github.event.number }}
               -----------------------------------------------
               请及时更新任务系统的任务状态：https://tasks.nocobase.com/

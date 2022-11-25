@@ -40,11 +40,11 @@ jobs:
           msg_type: text
           content: |
             text: |
-              hahahah
-              from github action test
-              repository: ${{ github.repository }}
-              committer: ${{ github.actor }}
-              compare: ${{ github.event.compare }}
-              job status: ${{ job.status }}
-              access url: https://www.baidu.com
-              备注: 请及时更新任务系统的任务状态：https://tasks.nocobase.com/
+              地址：${{ github.event.pull_request.html_url }}
+              标题：${{ github.event.pull_request.title }}
+              内容：${{ github.event.pull_request.body }}
+              分支：${{ github.event.pull_request.head.ref }}
+              ----------------------------------------------
+              部署环境访问地址：https://tasks.nocobase.com/
+              -----------------------------------------------
+              请及时更新任务系统的任务状态：https://tasks.nocobase.com/

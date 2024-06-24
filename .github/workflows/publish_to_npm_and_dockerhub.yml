@@ -7,8 +7,6 @@ name: publish to npm and dockerhub
 
 on:
   push:
-    tags:
-      - v*
 
 jobs:
   test:
@@ -98,7 +96,7 @@ jobs:
           yarn release:force --registry https://registry.npmjs.org
 
   publish-dockerhub:
-    needs: [test, publish_npmjs_org]
+    needs: [test]
     if: ${{ success() }}
     runs-on: ubuntu-latest
     environment:
